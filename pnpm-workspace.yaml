@@ -1,6 +1,9 @@
 packages:
   - '.'
 
+allowBuilds:
+  '@parcel/watcher': true
+
 overrides:
   'vue': 'rc'
   '@vue/compiler-core': 'rc'
