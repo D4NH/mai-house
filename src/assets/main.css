@@ -97,14 +97,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--color-link);
     transition: 0.3s;
-}
-
-@media (hover: hover) {
-    a:hover {
-        color: var(--color-link-hover);
-    }
 }
 
 .icon {

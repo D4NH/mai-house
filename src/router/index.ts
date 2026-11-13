@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { isValidPropertySlug } from '@/data/properties';
 import HomeView from '../views/HomeView.vue';
 
 const router = createRouter({
@@ -10,9 +11,17 @@ const router = createRouter({
             component: HomeView,
         },
         {
-            path: '/properties',
-            name: 'properties',
-            component: () => import('../views/Propertiesview.vue'),
+            path: '/:slug',
+            name: 'property',
+            component: () => import('../views/PropertyView.vue'),
+            props: true,
+            beforeEnter: (to) => {
+                const slug = Array.isArray(to.params.slug) ? to.params.slug[0] : to.params.slug;
+                if (!slug || !isValidPropertySlug(slug)) {
+                    return undefined;
+                }
+                return true;
+            },
         },
         {
             path: '/links',
@@ -20,6 +29,9 @@ const router = createRouter({
             component: () => import('../views/LinksView.vue'),
         },
     ],
+    scrollBehavior() {
+        return { top: 0 };
+    },
 });
 
 export default router;

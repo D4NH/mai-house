@@ -3,7 +3,7 @@ import { MapPin } from '@lucide/vue';
 </script>
 
 <template>
-    <div class="flex flex-col space-y-8">
+    <div class="flex flex-col space-y-8 max-w-xl">
         <section
             aria-labelledby="bookings-heading"
             class="flex flex-col gap-y-4">
