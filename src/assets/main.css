@@ -1,36 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap');
 @import 'tailwindcss';
-@import './base.css';
 
-#app {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-weight: normal;
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Lora', ui-serif, Georgia, serif;
+
+    /* Brand Primary (Sage Green from Logo) */
+    --color-sage-50: #f3f7f2;
+    --color-sage-100: #e3ece1;
+    --color-sage-200: #c7d9c4;
+    --color-sage-300: #a1be9d;
+    --color-sage-400: #91a987;
+    --color-sage-500: #638b61;
+    --color-sage-600: #4e704c;
+    --color-sage-700: #3f593e;
+    --color-sage-800: #344833;
+    --color-sage-900: #2f4f35;
+    --color-sage-950: #18291b;
+
+    /* Secondary / Warm Terracotta Accent */
+    --color-terracotta-50: #fbf6f3;
+    --color-terracotta-100: #f6eae3;
+    --color-terracotta-200: #ecd3c5;
+    --color-terracotta-300: #dfb49d;
+    --color-terracotta-400: #d19372;
+    --color-terracotta-500: #c87a53;
+    --color-terracotta-600: #b66441;
+    --color-terracotta-700: #975036;
+    --color-terracotta-800: #7b4330;
+    --color-terracotta-900: #65392b;
+    --color-terracotta-950: #361c14;
+
+    /* Neutral Warm Surfaces */
+    --color-sand-50: #fbfaf7;
+    --color-sand-100: #f7f4eb;
+    --color-sand-200: #ece6d5;
+    --color-sand-300: #ded4b8;
+    --color-sand-400: #cbbd97;
+    --color-sand-500: #b8a57a;
+    --color-sand-600: #a38e63;
+    --color-sand-700: #877350;
+    --color-sand-800: #6f5e44;
+    --color-sand-900: #5c4e3a;
+    --color-sand-950: #32291e;
+
+    /* Aliases */
+    --color-brand-primary: var(--color-sage-500);
+    --color-brand-dark: var(--color-sage-900);
+    --color-brand-light: var(--color-sage-400);
+    --color-brand-accent: var(--color-terracotta-500);
+    --color-surface-canvas: var(--color-sand-100);
+
+    /* Primary Button (Terracotta CTA) */
+    --color-action-primary: var(--color-terracotta-500); /* #c87a53 */
+    --color-action-primary-hover: var(--color-terracotta-600); /* #b66441 */
+    --color-action-primary-active: var(--color-terracotta-700); /* #975036 */
+
+    /* Secondary / Linktree Button (Sage) */
+    --color-action-secondary: var(--color-sage-500); /* #638b61 */
+    --color-action-secondary-hover: var(--color-sage-600); /* #4e704c */
+    --color-action-secondary-active: var(--color-sage-700); /* #3f593e */
+
+    /* Ghost / Subtle Surface Hover (Nav items, outline buttons, card tints) */
+    --color-surface-hover: var(--color-sand-200); /* #ece6d5 */
+    --color-surface-active: var(--color-sand-300); /* #ded4b8 */
+    --color-surface-sage-hover: var(--color-sage-100); /* #e3ece1 */
+
+    /* Inline Text Links */
+    --color-link: var(--color-terracotta-600); /* #b66441 */
+    --color-link-hover: var(--color-terracotta-800); /* #7b4330 */
+    --color-link-inverse: var(--color-sand-100); /* #f7f4eb */
+    --color-link-inverse-hover: var(--color-terracotta-300); /* #dfb49d */
+
+    /* Borders & Focus Rings */
+    --color-border-subtle: var(--color-sand-200); /* #ece6d5 */
+    --color-border-hover: var(--color-sage-400); /* #91a987 */
+    --color-focus-ring: var(--color-sage-500); /* #638b61 */
 }
 
-a,
-.green {
+@layer base {
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-display);
+        font-weight: 600;
+    }
+}
+
+body {
+    min-height: 100vh;
+    background: var(--color-sand-100);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
     text-decoration: none;
-    color: hsla(160, 100%, 37%, 1);
-    transition: 0.4s;
-    padding: 3px;
+    color: var(--color-link);
+    transition: 0.3s;
 }
 
 @media (hover: hover) {
     a:hover {
-        background-color: hsla(160, 100%, 37%, 0.2);
+        color: var(--color-link-hover);
     }
 }
 
-@media (min-width: 1024px) {
-    body {
-        display: flex;
-        place-items: center;
-    }
-
-    #app {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 0 2rem;
-    }
+.icon {
+    width: 1em;
+    height: 1em;
 }
