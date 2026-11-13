@@ -20,6 +20,21 @@ const property = computed<Property | null>(() => {
         v-if="property"
         class="flex flex-col gap-y-8">
         <header class="flex flex-col gap-y-2">
+            <ul class="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+                <li class="font-semibold">Homestay</li>
+                <li
+                    aria-hidden="true"
+                    class="h-1 w-1 rounded-full bg-gray-400"></li>
+                <li>Capacity 4 People</li>
+                <li
+                    aria-hidden="true"
+                    class="h-1 w-1 rounded-full bg-gray-400"></li>
+                <li>2 Bedrooms</li>
+                <li
+                    aria-hidden="true"
+                    class="h-1 w-1 rounded-full bg-gray-400"></li>
+                <li>3 Bathrooms</li>
+            </ul>
             <h1 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">
                 {{ property.name }}
             </h1>
@@ -28,15 +43,20 @@ const property = computed<Property | null>(() => {
             </p>
         </header>
 
-        <div class="aspect-video w-full overflow-hidden rounded-xl bg-sand-200">
+        <div class="grid grid-cols-3 grid-rows-2 aspect-21/9 w-full overflow-hidden gap-4">
             <img
                 :src="property.heroImage"
-                :alt="property.name"
-                class="h-full w-full object-cover" />
+                class="col-span-2 row-span-2 h-full w-full object-cover rounded-lg" />
+            <img
+                src="https://a0.muscache.com/im/pictures/hosting/Hosting-1545319904260865242/original/cffdab7e-9623-4254-bda7-e171f3e40f2e.jpeg?im_w=720"
+                class="h-full w-full object-cover rounded-lg" />
+            <img
+                src="https://a0.muscache.com/im/pictures/hosting/Hosting-1545319904260865242/original/9c220261-0019-484c-a282-f15821be4bfe.jpeg?im_w=720"
+                class="h-full w-full object-cover rounded-lg" />
         </div>
 
-        <div class="grid grid-cols-1 gap-10 lg:grid-cols-12">
-            <section class="flex flex-col gap-y-6 lg:col-span-8">
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+            <section class="flex flex-col gap-y-6 lg:col-span-2">
                 <p class="leading-relaxed">
                     {{ property.description }}
                 </p>
@@ -52,7 +72,7 @@ const property = computed<Property | null>(() => {
             </section>
 
             <aside
-                class="flex flex-col gap-y-3 rounded-2xl border border-border-subtle bg-white p-6 lg:col-span-4">
+                class="flex flex-col gap-y-3 rounded-lg border border-border-subtle bg-white p-6">
                 <h2 class="text-base font-bold">Reserve This Property</h2>
                 <a
                     :href="property.bookingLinks.whatsapp"

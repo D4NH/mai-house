@@ -7,9 +7,6 @@ import { MapPin } from '@lucide/vue';
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
         <div class="flex flex-col justify-between lg:col-span-4">
             <div class="flex max-w-xl flex-col gap-y-3">
-                <p class="text-xs font-semibold uppercase tracking-widest text-ink-muted">
-                    Yogyakarta Collection
-                </p>
                 <h1
                     class="font-display text-3xl font-bold tracking-tight text-ink-primary sm:text-4xl">
                     Our Properties
@@ -36,7 +33,7 @@ import { MapPin } from '@lucide/vue';
                 </a>
                 <a
                     href="https://www.tiktok.com/@mai.house.jogja/"
-                    class="hover:text-link transition-colors"
+                    class="text-link hover:text-link-hover transition-colors"
                     target="_blank"
                     rel="noopener noreferrer">
                     <svg
@@ -49,7 +46,7 @@ import { MapPin } from '@lucide/vue';
                 </a>
                 <a
                     href="https://wa.me/6282221861229"
-                    class="hover:text-link transition-colors"
+                    class="text-link hover:text-link-hover transition-colors"
                     target="_blank"
                     rel="noopener noreferrer">
                     <svg

@@ -6,9 +6,9 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
         name: 'Mai House Jogja - Piyungan',
         tagline: 'Tropical minimalist house with private pool',
         description:
-            '2 bedrooms with AC, 3 bathrooms, full kitchen and enclosed indoor pool in Piyungan.',
+            'Mai House is a modern, air-conditioned retreat in Piyungan featuring a private swimming pool and two bedrooms, each with a 180cm King bed and its own private bathroom, perfect for guests seeking a peaceful escape near the scenic hills of Gunungkidul.',
         address: 'Dusun Bintaran Wetan, Srimulyo, Piyungan, Bantul',
-        mapsUrl: 'https://maps.google.com/...',
+        mapsUrl: 'https://maps.app.goo.gl/ugBBs3t5Qfk3253x6',
         specs: {
             bedrooms: 2,
             bathrooms: 3,
@@ -24,9 +24,12 @@ export const PROPERTIES: Record<PropertySlug, Property> = {
         heroImage: '/images/piyungan.jpg',
         gallery: ['/images/piyungan/1.jpg', '/images/piyungan/2.jpg'],
         bookingLinks: {
-            agoda: 'https://www.agoda.com/...',
-            airbnb: 'https://www.airbnb.com/...',
-            whatsapp: 'https://wa.me/628...',
+            agoda: 'https://www.agoda.com/mai-house-jogja-h81075430/hotel/yogyakarta-id.html',
+            airbnb: 'https://www.airbnb.co.id/rooms/1545319904260865242',
+            booking: 'https://www.booking.com/hotel/id/mai-house-jogja.html',
+            tiket: 'https://www.tiket.com/homes/indonesia/mai-house-jogja-811001764047164369',
+            trip: 'https://www.trip.com/hotels/cityname-hotel-detail-132607165',
+            whatsapp: 'https://wa.me/6282221861229',
         },
     },
     wonosari: {
