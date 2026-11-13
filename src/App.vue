@@ -1,90 +1,40 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
-import HelloWorld from './components/HelloWorld.vue';
+
+const currentYear: number = new Date().getFullYear();
 </script>
 
 <template>
-    <header>
-        <img
-            alt="Vue logo"
-            class="logo"
-            src="@/assets/logo.jpeg"
-            width="125"
-            height="125" />
+    <div
+        class="min-h-screen bg-sand-100 text-ink-primary flex flex-col justify-between px-6 py-8 md:px-14 md:py-12">
+        <header class="mx-auto flex flex-wrap w-full max-w-7xl items-start justify-between">
+            <img
+                class="h-35 w-35 rounded-lg"
+                src="@/assets/logo.jpeg" />
 
-        <div class="wrapper">
-            <HelloWorld msg="You did it!" />
-
-            <nav>
+            <nav
+                aria-label="Primary Navigation"
+                class="flex items-center gap-6 md:gap-10 font-medium pt-4 sm:pt-0">
                 <RouterLink to="/">Home</RouterLink>
+                <RouterLink to="/properties">Properties</RouterLink>
                 <RouterLink to="/links">Links</RouterLink>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <RouterView />
+        <RouterView class="mx-auto my-auto w-full max-w-7xl pt-8 pb-8" />
+
+        <footer
+            class="mx-auto w-full max-w-7xl border-t border-border-subtle pt-6 text-xs text-ink-muted">
+            <div class="flex flex-col items-center justify-between gap-2 sm:flex-row">
+                <p>© {{ currentYear }} Mai House. All rights reserved.</p>
+                <p class="text-ink-subtle">Yogyakarta</p>
+            </div>
+        </footer>
+    </div>
 </template>
 
-<style scoped>
-header {
-    line-height: 1.5;
-    max-height: 100vh;
-}
-
-.logo {
-    display: block;
-    margin: 0 auto 2rem;
-}
-
-nav {
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
+<style lang="scss" scoped>
+a.router-link-exact-active {
     color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-    background-color: transparent;
-}
-
-nav a {
-    display: inline-block;
-    padding: 0 1rem;
-    border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-    border: 0;
-}
-
-@media (min-width: 1024px) {
-    header {
-        display: flex;
-        place-items: center;
-        padding-right: calc(var(--section-gap) / 2);
-    }
-
-    .logo {
-        margin: 0 2rem 0 0;
-    }
-
-    header .wrapper {
-        display: flex;
-        place-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    nav {
-        text-align: left;
-        margin-left: -1rem;
-        font-size: 1rem;
-
-        padding: 1rem 0;
-        margin-top: 1rem;
-    }
 }
 </style>
