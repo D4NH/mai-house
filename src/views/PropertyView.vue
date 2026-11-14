@@ -162,6 +162,28 @@ const otaLinks = computed(() => {
                         </div>
                     </div>
                 </div>
+
+                <div class="space-y-2">
+                    <h3>Location</h3>
+                    <iframe
+                        width="100%"
+                        height="350px"
+                        frameborder="0"
+                        style="border: 0"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Mai%20House%20Jogja%2C%20Jalan%20Dusun%20Bintaran%20Wetan%2C%20Bantaran%20Wetan%2C%20Srimulyo%2C%20Bantul%20Regency%2C%20Special%20Region%20of%20Yogyakarta%2C%20Indonesia&maptype=roadmap"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="space-y-2">
+                    <h3>Neighbourhood highlights</h3>
+                    <p>
+                        Experience the Best of Both Worlds Located on the eastern edge of
+                        Yogyakarta, Piyungan offers a refreshing escape from the urban hustle while
+                        remaining conveniently accessible. Known as the gateway to the scenic Gunung
+                        Kidul region, our neighborhood is perfect for those who want to enjoy cooler
+                        breezes and local village charm.
+                    </p>
+                </div>
             </section>
 
             <aside
