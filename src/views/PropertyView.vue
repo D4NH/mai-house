@@ -166,12 +166,13 @@ const otaLinks = computed(() => {
                 <div class="space-y-2">
                     <h3>Location</h3>
                     <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.601221641908!2d110.45456277618992!3d-7.831960677804076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a516477dd03cd%3A0x433e0a11cdcef702!2sMai%20House%20Jogja!5e0!3m2!1sen!2sid!4v1794620493667!5m2!1sen!2sid"
                         width="100%"
                         height="350px"
-                        frameborder="0"
                         style="border: 0"
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Mai%20House%20Jogja%2C%20Jalan%20Dusun%20Bintaran%20Wetan%2C%20Bantaran%20Wetan%2C%20Srimulyo%2C%20Bantul%20Regency%2C%20Special%20Region%20of%20Yogyakarta%2C%20Indonesia&maptype=roadmap"
-                        allowfullscreen></iframe>
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
 
                 <div class="space-y-2">
