@@ -44,6 +44,15 @@
     --color-sand-900: #5c4e3a;
     --color-sand-950: #32291e;
 
+    /* Semantic Text Colors (Mapped to Sage & Sand scales for WCAG contrast) */
+    --color-ink-primary: var(--color-sage-950); /* #18291b - Main headings & high-emphasis copy */
+    --color-ink-secondary: var(--color-sage-800); /* #344833 - Body text & descriptions */
+    --color-ink-muted: var(--color-sage-600); /* #4e704c - Captions, metadata & timestamps */
+    --color-ink-subtle: var(--color-sand-600); /* #a38e63 - Placeholders & disabled labels */
+    --color-ink-accent: var(--color-terracotta-600); /* #b66441 - Inline links & price highlights */
+    --color-ink-inverse: var(--color-sand-50); /* #fbfaf7 - Text on dark sage/terracotta surfaces */
+    --color-ink-inverse-muted: var(--color-sage-200); /* #c7d9c4 - Subtext on dark footer/nav */
+
     /* Aliases */
     --color-brand-primary: var(--color-sage-500);
     --color-brand-dark: var(--color-sage-900);
